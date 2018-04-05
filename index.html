@@ -5,8 +5,10 @@
     </head>
     <body>
         <div class="container">
-            <form action="/upload">
-                <input type="text" placeholder="">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="file-upload">Please select a file</label>
+                <input type="file" id="file" name="file">
+                <button type="submit">Submit</button>
             </form>
         </div>
     </body>
