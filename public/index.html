@@ -2,10 +2,56 @@
 <html>
     <head>
         <title>File MetaData Service</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link type="text/css" href="style.css">
     </head>
     <body>
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1 class="text-center">
+                                <span class="glyphicon glyphicon-arrow-right"></span> File Meta Data
+                                <span class="glyphicon glyphicon-arrow-left"></span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="jumbotron">
+                        <h2 class="text-center">
+                                I can submit a form object that includes a file upload.
+                                <br>
+                                The from file input field has the "name" attribute set to "upfile". We rely on this in testing.
+                                <br>
+                                When I submit something, I will receive the file name, and size in bytes within the JSON response.
+                            <br>
+                        </h2>
+                        <div class="text-center">
+                                <form action="/upload" method="POST" enctype="multipart/form-data" id="form-upload">
+                                    <label for="file-upload">Please select a file</label>
+                                    <input type="file" id="file" name="file">
+                                    <button type="submit">Submit</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="container">
+                        <p>
+                            <a href="https://www.freecodecamp.org/sahanabalram" id="clear">Freecodecamp</a> |
+                            <a href="https://github.com/sahanabalram">GitHub Repo</a> |
+                            <a href="https://sahanabalram.github.io/ReactPortfolio/"> ReactPortfolio</a>
+                        </p>
+                    </div>
+                </footer>
+            
         <div class="container">
-            <form action="/upload" method="POST" enctype="multipart/form-data">
+             <h1 text-center> FILE META DATA</h1>
+        </div>
+        
+        <div class="container1" id="upload">
+            <form action="/upload" method="POST" enctype="multipart/form-data" id="form-upload">
                 <label for="file-upload">Please select a file</label>
                 <input type="file" id="file" name="file">
                 <button type="submit">Submit</button>
